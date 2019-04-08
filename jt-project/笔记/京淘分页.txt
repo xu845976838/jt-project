@@ -1,0 +1,6 @@
+//http://localhost:8091/item/query?page=1&rows=30
+
+前端传来一个当前页数，和分页的行数，返回的方法类型为EasyUITable,当请求到达业务层
+对数据进行处理 起始地址start为（page-1）*30 算出起始地址后将sart和rows传到持久层
+通过sql select * from 表名 order by updated desc limit #{start},#{rows};返回的值分别在业务层
+set进EasyUITable,然后再返回

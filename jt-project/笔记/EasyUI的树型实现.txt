@@ -1,0 +1,9 @@
+EasyUI的tree要求返回的JSON格式是Json:
+	[{id:1,text:”节点名称”,state:”open/closed”},{},{}……]
+
+所以返的值需要是用一个VO对象进行封装
+
+请求的地址为/item/cat/list
+
+方法通过parentId进行查询，业务端的方法调用了，同层的寻找商品目录的方法，并将返回的结果保存在了
+ItemCat对象中，然后遍历该对象将值赋给EasyUITree，然后判断，如果有父节点则关闭，不然则打开

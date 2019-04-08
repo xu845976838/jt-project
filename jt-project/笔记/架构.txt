@@ -1,0 +1,2 @@
+jt-parent打包方式为pom,为父类项目，jt-manage和jt-common继承了父类项目，父类项目的作用是管理所有的jar包
+jt-common是打包方式为jar包，他的作用是提供公具类，jt-manage实现了对它的依赖。
